@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="post">
+
+  {%- if page.title -%}
+    <header class="post-header">
+      <span class="post-title">{{ page.title | escape }}</span>
+    </header>
+  {%- endif -%}
+  {%- if page.toc -%}
+    <div id="subnav">
+      {{ content | toc_only }}
+    </div>
+  {%- endif -%}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>

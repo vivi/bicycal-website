@@ -1,0 +1,241 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+$base-font-weight: 300 !default;
+@import "minima";
+
+.footer-col-wrapper {
+    @include relative-font-size(0.8);
+}
+
+.bicycal-mech {
+    position: absolute;
+    bottom: $spacing-unit;
+    right: 0;
+    width: $content-width / 7;
+    z-index: -10;
+    opacity: 0.5;
+    margin-right: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;
+}
+
+#map {
+    width: $content-width / 3;
+    border: 1px solid;
+}
+
+.img-wrap {
+    position: relative;
+}
+
+img#penguin {
+    background-color: $background-color;
+    width: 100%;
+    max-width: 150px;
+}
+
+%center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    @extend %center;
+}
+
+table td {
+    background-color: $background-color;
+}
+
+#subnav {
+    position: relative;
+}
+
+.section-nav {
+    @extend %center;
+    text-align: center;
+    border-top: 1px solid $grey-color-light;
+    border-bottom: 1px solid $grey-color-light;
+    margin: 8px 0px;
+    padding-bottom: 3px;
+    z-index: 0;
+}
+
+@mixin fancy-link() {
+    background-color: $background-color;
+    display: inline;
+    &:after{
+        content: "✱";
+        padding-left: 0.2em;
+        opacity: 0;
+    }
+    &:hover {
+        &:after{
+            opacity: 0.6;
+            transition: opacity 0.2s linear;
+        }
+    }
+}
+
+%reset-text {
+    color: $text-color;
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:active, &:focus, &:visited {
+        color: $text-color;
+    }
+}
+
+nav .trigger .page-link {
+    @media screen and (min-width: $on-laptop) {
+        @include fancy-link();
+        padding: 5px 0px 5px 0px;
+    }
+}
+
+@include media-query($on-palm) {
+    table {
+        table-layout: fixed;
+    }
+}
+
+.site-nav {
+    z-index: 10;
+}
+
+.section-nav li {
+    @include fancy-link();
+    @include relative-font-size(0.8);
+    padding: 5px 5px;
+}
+
+.section-nav li a {
+    @extend %reset-text;
+    color: $text-color;
+}
+
+.page-link {
+    @extend %reset-text;
+    font-weight: 500;
+}
+
+.site-title, .site-title-inner {
+    @extend %reset-text;
+}
+
+.site-title-inner {
+    @inculde fancy-link();
+    padding: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1:not(.post-title) {
+    margin-bottom: 10px;
+    &:before {
+        content: "✱";
+        padding-right: 0.25em;
+    }
+}
+
+#bicycle {
+    height: 0.9em;
+    margin-right: 5px;
+    padding-bottom: 0.15em;
+    &:hover {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    }
+}
+
+
+@keyframes shake {
+    10%, 90% {
+        transform: rotate(15deg);
+    }
+
+    20%, 80% {
+        transform: rotate(-15deg);
+    }
+
+    30%, 50%, 70% {
+        transform: rotate(-15deg);
+    }
+
+    40%, 60% {
+        transform: rotate(15deg);
+    }
+}
+
+.post-header {
+    margin-bottom: $spacing-unit / 2;
+    text-align: center;
+}
+
+.post-title {
+    @include relative-font-size(2.3);
+}
+
+.page-content {
+    padding-top: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+    width: -webkit-calc(22% - (#{$spacing-unit} / 2));
+    width:         calc(22% - (#{$spacing-unit} / 2));
+    text-align: center;
+}
+
+.footer-col-2 {
+    width: -webkit-calc(55% - (#{$spacing-unit} / 2));
+    width:         calc(55% - (#{$spacing-unit} / 2));
+    text-align: center;
+}
+
+.footer-col-3 {
+    width: -webkit-calc(22% - (#{$spacing-unit} / 2));
+    width:         calc(22% - (#{$spacing-unit} / 2));
+    text-align: center;
+}
+
+@include media-query($on-laptop) {
+    .footer-col-1,
+    .footer-col-2 {
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
+        text-align: center;
+    }
+
+    .footer-col-3 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+        text-align: center;
+    }
+}
+
+@include media-query($on-palm) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+#fb {
+    width: 500px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+#check-fb {
+    @include media-query($on-palm) {
+        display: none;
+    }
+}
