@@ -1,0 +1,62 @@
+- name: Bearings
+  desc: Replacement bearings for your bike.
+  price: $0.15/ea
+- name: Bearing Cup
+  desc: Replacement bearing cups for your bike.
+  price: $2.00/cup.
+- name: Cables
+  desc: Broken, frayed, old cables? OEM Jagwire galvanized cables, Price is per cable. Most bikes have 4 cables in total.
+  price: $6.00/cable
+- name: Cable Housing
+  desc: Sticky and unresponsive shifting/braking?
+  price: $1.00/foot. Segments will be cut on the spot.
+- name: Ferrules
+  desc: Replacement ferrules for brakes. Most bikes have 2 ferrules.
+  price: $0.50/ea
+- name: Nuts, Bolts, Spacers
+  desc: General replacement parts for fitting purposes
+  price: $2.00/item
+- name: Patch Kits
+  desc: Flat tire? Too cheap to buy a new tube?
+  price: $2.00/ea
+- name: Rim Tape
+  desc: Prevent your rims from giving you flats.
+  price: $6.00/roll
+- name: Single Speed Chain
+  desc: KMC Z410
+  price: $10.00/ea
+- name: Seven/Eight Speed Chain
+  desc: KMC Z51
+  price: $10.00/ea
+- name: Nine Speed Chain
+  desc: KMC x9-73
+  price: $20.00/ea
+- name: Ten Speed Chain
+  price: $30.00/ea
+  desc: KMC x10
+- name: Kenda Tires
+  price: $15.00/ea
+- name: Kenda tubes.
+  desc: Most sizes available and in stock.
+  price: $6.00/ea
+- name: Pedals
+  desc: Bored of your current pedals? Missing pedals? Colors and models depend on availability.
+  price: $15.00/set
+- name: Locks
+  desc: Kryptonite U-lock. Helps prevent theft.
+  price: $25.00/ea
+- name: Lights
+  desc: Nice lights.
+  price: $30.00/ea
+- name: Cloth Bar Tape
+  desc: Make your bike look nicer!
+  price: $6.00/roll
+- name: Cork Bar Tape
+  desc: Make your bike look nicer AND more comfortable
+  price: $15.00/roll
+- name: Used Misc. Parts
+  desc: Looking for a part listed here? Come on in and ask the head mechanic!
+  price: Varies
+- name: Advice
+  desc: Not sure what any of these mean but need help?
+  price: FREE! Come on in and ask the head mechanic!
