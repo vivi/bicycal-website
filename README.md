@@ -17,3 +17,14 @@ To serve:
 ```
 $ bundle exec jekyll serve
 ```
+
+## Pushing to Production
+First build:
+```
+$ JEKYLL_ENV=production jekyll build
+```
+
+Then copy `_site/*` over to the webserver:
+```
+$ rsync -avzP _site/* <HOST>:<PATH>
+```
